@@ -285,16 +285,16 @@ export default {
   initialValue: {
     useGallery: 'false',
     galleryPhotos: {
-      _type: 'productGallery',
-      forOption: ''
+      _type: 'productGallery'
+      // forOption: ''
     },
     listingPhotos: {
-      _type: 'productListingPhotos',
-      forOption: ''
+      _type: 'productListingPhotos'
+      // forOption: ''
     },
     cartPhotos: {
-      _type: 'productCartPhotos',
-      forOption: ''
+      _type: 'productCartPhotos'
+      // forOption: ''
     }
   },
   preview: {
