@@ -3,7 +3,7 @@ const client = sanityClient({
   dataset: process.env.SANITY_PROJECT_DATASET,
   projectId: process.env.SANITY_PROJECT_ID,
   useCdn: process.env.NODE_ENV === 'production',
-  apiVersion: '2021-03-25',
+  apiVersion: '2022-07-21',
 })
 
 // see breakdown of code bloat
@@ -38,12 +38,12 @@ module.exports = withBundleAnalyzer({
     // Needed for Klaviyo forms
     KLAVIYO_API_KEY: process.env.KLAVIYO_API_KEY,
 
-    // Needed for Mailchimp forms
-    MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
-    MAILCHIMP_SERVER: process.env.MAILCHIMP_SERVER,
+    // // Needed for Mailchimp forms
+    // MAILCHIMP_API_KEY: process.env.MAILCHIMP_API_KEY,
+    // MAILCHIMP_SERVER: process.env.MAILCHIMP_SERVER,
 
-    // Needed for SendGrid forms
-    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
+    // // Needed for SendGrid forms
+    // SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
   },
   async redirects() {
     const sanityRedirects = await fetchSanityRedirects()
