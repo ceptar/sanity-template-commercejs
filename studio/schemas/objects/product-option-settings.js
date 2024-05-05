@@ -9,20 +9,20 @@ export default {
   type: 'object',
   icon: () => <Gear />,
   fields: [
-    // {
-    //   title: 'Wich option is this for?',
-    //   name: 'forOption',
-    //   type: 'string',
-    //   options: {
-    //     list: [{ title: 'All', value: '' }],
-    //     fromField: 'groups',
-    //     fromSubField: 'options',
-    //     fromFieldData: {
-    //       title: 'name',
-    //       value: 'position'
-    //     }
-    //   }
-    // },
+    {
+      title: 'Wich option is this for?',
+      name: 'forOption',
+      type: 'string',
+      options: {
+        list: [{ title: 'All', value: '' }],
+        fromField: 'groups',
+        fromSubField: 'options',
+        fromFieldData: {
+          title: 'name',
+          value: 'position'
+        }
+      }
+    },
     {
       title: 'Color Swatch',
       name: 'color',

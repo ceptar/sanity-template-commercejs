@@ -15,11 +15,11 @@ export default {
       title: 'Value',
       name: 'value',
       type: 'string'
-    },
-    {
-      title: 'Position',
-      name: 'position',
-      type: 'number'
     }
+    // {
+    //   title: 'Position',
+    //   name: 'position',
+    //   type: 'number'
+    // }
   ]
 }

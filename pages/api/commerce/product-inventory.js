@@ -30,7 +30,7 @@ export default async function send(req, res) {
     method: 'GET',
     headers: commerceConfig,
   }).then ((response) => {
-    return response.data;
+    return response.data; !Values
   }).catch(() => null );
 
   // Return error if Commerce can't find product
@@ -42,8 +42,8 @@ export default async function send(req, res) {
 
   // Construct the product object
   const product = {
-    inStock: (inventory?.managed && inventory.available > 0) || true,
-    lowStock: (inventory?.managed && inventory.available <= 4) || false,
+    inStock: ((commerceProduct?.inventory || {}).managed && (commerceProduct.inventory || {}).available > 0) || true,
+  lowStock: ((commerceProduct?.inventory || {}).managed && (commerceProduct.inventory || {}).available <= 4) || false,
   }
 
   // console.log('Product object with variants details', product);

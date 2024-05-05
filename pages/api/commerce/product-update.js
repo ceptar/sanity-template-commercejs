@@ -107,14 +107,14 @@ export default async function send(req, res) {
 
   // Define product options if there is more than one variant group
   const productOptions =
-  //   variantGroups?.length > 1
-  //     ? variantGroups.map((group) => ({
-  //       _key: group.id,
-  //       _type: 'productOption',
-  //       name: group.name,
-  //       values: group.options.map((option) => option.name),
-  //     }
-  // )) : 
+    variantGroups?.length > 1
+      ? variantGroups.map((group) => ({
+        _key: group.id,
+        _type: 'productOption',
+        name: group.name,
+        // values: group.options.map((option) => option.name),
+      }
+  )) : 
   [];
 
   // Define product fields
@@ -130,7 +130,7 @@ export default async function send(req, res) {
     sku: sku,
     inStock: (inventory?.managed && inventory.available > 0) || true,
     lowStock: (inventory?.managed && inventory.available <= 4) || false,
-    values: productOptions,
+    // values: productOptions,
   };
 
   /*  ------------------------------ */

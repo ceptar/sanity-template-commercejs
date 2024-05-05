@@ -28,6 +28,7 @@ import productHero from './modules/product-hero'
 import categoryGrid from './modules/category-grid'
 
 // Object types
+// import image from './objects/image'
 import price from './objects/commerce-product-price'
 import commerceSeo from './objects/commerce-product-seo';
 
@@ -89,6 +90,7 @@ export default createSchema({
 
     /* --------------- */
     /* 2: Module types */
+    // image,
     grid,
     hero,
     marquee,
