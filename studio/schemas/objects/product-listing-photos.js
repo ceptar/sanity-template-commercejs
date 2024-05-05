@@ -8,20 +8,20 @@ export default {
   type: 'object',
   icon: Stack,
   fields: [
-    {
-      title: 'Wich Variants is this for?',
-      name: 'forOption',
-      type: 'string',
-      options: {
-        list: [{ title: 'All', value: '' }],
-        fromField: 'options',
-        fromSubField: 'values',
-        fromFieldData: {
-          title: 'name',
-          value: 'position'
-        }
-      }
-    },
+    // {
+    //   title: 'Wich Variants is this for?',
+    //   name: 'forOption',
+    //   type: 'string',
+    //   options: {
+    //     list: [{ title: 'All', value: '' }],
+    //     fromField: 'options',
+    //     fromSubField: 'values',
+    //     fromFieldData: {
+    //       title: 'name',
+    //       value: 'position'
+    //     }
+    //   }
+    // },
     customImage({
       title: 'Thumbnail',
       name: 'listingPhoto'
@@ -33,11 +33,11 @@ export default {
   ],
   preview: {
     select: {
-      listingPhoto: 'listingPhoto',
-      forOption: 'forOption'
+      listingPhoto: 'listingPhoto'
+      // forOption: 'forOption'
     },
-    prepare({ listingPhoto, forOption }) {
-      const option = forOption ? forOption.split(':') : null
+    prepare({ listingPhoto }) {
+      const option = null
       return {
         title:
           option && option.length > 1

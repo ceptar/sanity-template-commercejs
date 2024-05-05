@@ -7,7 +7,7 @@ const sanity = sanityClient({
   dataset: process.env.SANITY_PROJECT_DATASET,
   projectId: process.env.SANITY_PROJECT_ID,
   token: process.env.SANITY_API_TOKEN,
-  apiVersion: '2021-11-08',
+  apiVersion: '2022-07-21',
   useCdn: false,
 });
 
@@ -107,14 +107,15 @@ export default async function send(req, res) {
 
   // Define product options if there is more than one variant group
   const productOptions =
-    variantGroups?.length > 1
-      ? variantGroups.map((group) => ({
-        _key: group.id,
-        _type: 'productOption',
-        name: group.name,
-        values: group.options.map((option) => option.name),
-      }
-  )) : [];
+  //   variantGroups?.length > 1
+  //     ? variantGroups.map((group) => ({
+  //       _key: group.id,
+  //       _type: 'productOption',
+  //       name: group.name,
+  //       values: group.options.map((option) => option.name),
+  //     }
+  // )) : 
+  [];
 
   // Define product fields
   const productFields = {

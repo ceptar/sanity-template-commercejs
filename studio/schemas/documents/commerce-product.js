@@ -101,14 +101,14 @@ export default {
       readOnly: true,
       fieldset: 'commerce',
     },
-    {
-      title: 'Variant groups',
-      name: 'options',
-      type: 'array',
-      of: [{ type: 'productOption' }],
-      readOnly: true,
-      fieldset: 'commerce'
-    },
+    // {
+    //   title: 'Variant groups',
+    //   name: 'options',
+    //   type: 'array',
+    //   of: [{ type: 'productOption' }],
+    //   readOnly: true,
+    //   fieldset: 'commerce'
+    // },
     {
       title: 'Deleted from commerce?',
       name: 'wasDeleted',
@@ -153,32 +153,32 @@ export default {
               name: 'filter',
               type: 'reference',
               to: [{ type: 'filter' }]
-            },
-            {
-              title: 'Wich option is this for?',
-              name: 'forOption',
-              type: 'string',
-              options: {
-                list: [{ title: 'All', value: '' }],
-                fromField: 'options',
-                fromSubField: 'values',
-                fromFieldData: {
-                  title: 'name',
-                  value: 'position'
-                }
-              }
             }
+            // {
+            //   title: 'Wich option is this for?',
+            //   name: 'forOption',
+            //   type: 'string',
+            //   options: {
+            //     list: [{ title: 'All', value: '' }],
+            //     fromField: 'options',
+            //     fromSubField: 'values',
+            //     fromFieldData: {
+            //       title: 'name',
+            //       value: 'position'
+            //     }
+            //   }
+            // }
           ],
           preview: {
             select: {
               title: 'filter.title',
               type: 'filter.type',
-              color: 'filter.color.color',
-              forOption: 'forOption'
+              color: 'filter.color.color'
+              // forOption: 'forOption'
             },
-            prepare({ title = 'Untitled', type, color, forOption }) {
+            prepare({ title = 'Untitled', type, color }) {
               const displayType = type && type.trim() ? type : 'simple'
-              const option = forOption ? forOption.split(':') : null
+              const option = null
 
               return {
                 title,

@@ -8,7 +8,7 @@ const sanity = sanityClient({
   dataset: process.env.SANITY_PROJECT_DATASET,
   projectId: process.env.SANITY_PROJECT_ID,
   token: process.env.SANITY_API_TOKEN,
-  apiVersion: '2021-11-08',
+  apiVersion: '2022-07-21',
   useCdn: false,
 });
 

@@ -10,15 +10,15 @@ export default {
       title: 'Name',
       name: 'name',
       type: 'string'
-    },
-    {
-      title: 'Values',
-      name: 'values',
-      type: 'array',
-      of: [{ type: 'string' }],
-      options: {
-        layout: 'tags'
-      }
     }
+    // {
+    //   title: 'Values',
+    //   name: 'values',
+    //   type: 'array',
+    //   of: [{ type: 'string' }],
+    //   options: {
+    //     layout: 'tags'
+    //   }
+    // }
   ]
 }

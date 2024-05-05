@@ -73,13 +73,11 @@ export const product = `
     description,
     "photos": {
       "main": galleryPhotos[]{
-        forOption,
         photos[]{
           ${imageMeta}
         }
       },
       "listing": listingPhotos[]{
-        forOption,
         "default": listingPhoto{
           ${imageMeta}
         },
@@ -92,19 +90,11 @@ export const product = `
     lowStock,
     useGallery,
     surfaceOption,
-    options[]{
-      name,
-      position,
-      values[]
-    },
-    optionSettings[]{
-      forOption,
-      "color": color->color,
-    },
+
+   
     "klaviyoAccountID": *[_type == "generalSettings"][0].klaviyoAccountID,
     "filters": filters[]{
-      "slug": filter->slug,
-      forOption
+      "slug": filter->slug
     }
   }
 `
